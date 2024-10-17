@@ -1,0 +1,43 @@
+#include <stdio.h> 
+int main() { 
+int choice, type, sugar; 
+char again; 
+do { 
+printf("Welcome to our coffee shop!\n"); 
+printf("What type of coffee would you like? (1 - Espresso, 2 - Cappuccino, 3 - Latte): "); 
+scanf("%d", &choice); 
+if (choice == 1) { 
+printf("You chose Espresso.\n"); 
+printf("Would you like sugar in your Espresso? (1 - Yes, 2 - No): "); 
+scanf("%d", &sugar); 
+if (sugar == 1) { 
+printf("You chose Espresso with sugar.\n"); 
+} else { 
+printf("You chose Espresso without sugar.\n"); 
+} 
+} else if (choice == 2) { 
+printf("You chose Cappuccino.\n"); 
+printf("What type of Cappuccino would you like? (1 - Hot, 2 - Iced): "); 
+scanf("%d", &type); 
+if (type == 1) { 
+printf("You chose Hot Cappuccino.\n"); 
+} else { 
+printf("You chose Iced Cappuccino.\n"); 
+} 
+} else if (choice == 3) { 
+printf("You chose Latte.\n"); 
+printf("What type of Latte would you like? (1 - Hot, 2 - Iced): "); 
+scanf("%d", &type); 
+if (type == 1) { 
+printf("You chose Hot Latte.\n"); 
+} else { 
+printf("You chose Iced Latte.\n"); 
+} 
+} else { 
+printf("Invalid choice. Please try again.\n"); 
+} 
+printf("Would you like to order again? (y - Yes, n - No): "); 
+scanf(" %c", &again); 
+} while (again == 'y' || again == 'Y'); 
+return 0; 
+}
